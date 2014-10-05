@@ -1,0 +1,22 @@
+User feedback:
+
+Overall:
+He really likes the idea, he said he would use it.
+
+Suggestions and comments when using the prototype:
+If app does not have FB login I will not use it.
+Instead of a search bar for things to learn, have predefined opntions to avoid
+confusions.
+Confused when he wanted to see the profile. Have an icon always that allows easy
+navigation to main screen and profile.
+Gear icon is only for settings. 
+Have a bottom bar or fixed top bar to easy navigate.
+Add privacy to settings. Who can see your profile? Friend request?
+Inbox can suggest meetup places.
+Ability to send events or meetings so that the other person can accept. Calendar
+sync?
+
+To make money:
+- Suggested places have to pay.
+- Adds related to learning.
+
