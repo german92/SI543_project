@@ -1,0 +1,16 @@
+User feedback #2:
+
+Overall:
+-He thinks the app is accessible and easy to use, it is intuitive. 
+
+Comments and suggestions:
+-forgot password function
+-need home button
+-tutorial/walkthrough
+-friends list or favorites list
+-put back button, home, settings, and messages icons at top
+-put search function at top of home screen so that it is the focal point
+-message to tell the user what information will be drawn from their phone (e.g., location data)
+-calendar sync function for coordinating meetups
+-ranking system to give user feedback
+-ads for revenue
