@@ -5,7 +5,7 @@ learn and teach differen subjects.
 
 LinguaMeet is under development.
 
-#Founders
+##Founders
 Sarah Anderson
 Troy Leonard
 German Ostaszynski
