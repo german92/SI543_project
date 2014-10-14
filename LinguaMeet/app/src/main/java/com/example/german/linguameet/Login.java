@@ -35,4 +35,29 @@ public class Login extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public boolean login() {
+        //Read username and password
+        //Verify credentials with information on the database
+        //If credentials matches, proceed to load user data and proceed to home screen
+        //Else, prompt invalid credentials
+        return true;
+    }
+
+    public boolean createUser() {
+        //Creates new user with the entered credentials
+        //Redirect to home screen
+        return true;
+    }
+
+    public boolean forgotlogin() {
+        //User entered valid email address
+        //After user recieves email, he or she is redirected to change their password
+        return true;
+    }
+
+    public boolean facebookLogin() {
+        //user can login using facebook credentials
+        return true;
+    }
 }
