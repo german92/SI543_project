@@ -13,5 +13,6 @@
     <string name="title_activity_privacy">Privacy</string>
     <string name="title_activity_search_results">SearchResults</string>
     <string name="title_activity_send_message">SendMessage</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
 
 </resources>
