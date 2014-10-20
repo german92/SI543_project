@@ -48,6 +48,10 @@
             android:name=".SearchResults"
             android:label="@string/title_activity_search_results" >
         </activity>
+        <activity
+            android:name=".SendMessage"
+            android:label="@string/title_activity_send_message" >
+        </activity>
     </application>
 
 </manifest>
