@@ -24,8 +24,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
         android:src="@drawable/settings" />
 
     <Button
@@ -48,9 +46,55 @@
         android:layout_toEndOf="@+id/imageButton3"
         android:src="@drawable/home" />
 
-    <TextView
-        android:text="User Profile -- test test"
+    <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton4"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/back"
+        android:onClick="HomeScreen" />
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageButton4"
+        android:src="@drawable/profile"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Smith"
+        android:id="@+id/textView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_below="@+id/imageButton4"
+        android:textSize="36dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message User"
+        android:id="@+id/button2"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/imageView"
+        android:onClick="EditProfile" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details of Profile Here"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/button2"
+        android:layout_toRightOf="@+id/imageView"
+        android:textSize="36dp" />
+
 
 </RelativeLayout>
