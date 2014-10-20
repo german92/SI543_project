@@ -14,5 +14,6 @@
     <string name="title_activity_search_results">SearchResults</string>
     <string name="title_activity_send_message">SendMessage</string>
     <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="title_activity_options">Options</string>
 
 </resources>
