@@ -9,7 +9,7 @@
     tools:context="com.example.troy.linguameethome.Messages">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="Messages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView" />
