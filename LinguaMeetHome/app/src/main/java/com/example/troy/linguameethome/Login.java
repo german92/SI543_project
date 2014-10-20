@@ -44,11 +44,6 @@ public class Login extends Activity {
         return true;
     }
 
-    public boolean createUser() {
-        //Creates new user with the entered credentials
-        //Redirect to home screen
-        return true;
-    }
 
     public boolean forgotlogin() {
         //User entered valid email address

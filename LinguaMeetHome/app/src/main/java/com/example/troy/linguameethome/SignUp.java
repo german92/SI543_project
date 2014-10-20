@@ -33,4 +33,9 @@ public class SignUp extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void SignUp() {
+        //Creates new user with the entered credentials
+        //Redirect to home screen
+    }
 }
