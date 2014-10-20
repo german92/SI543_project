@@ -52,6 +52,7 @@
             android:name=".SendMessage"
             android:label="@string/title_activity_send_message" >
         </activity>
+        <activity android:name=".Options" />
     </application>
 
 </manifest>
