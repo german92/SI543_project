@@ -9,9 +9,10 @@
     tools:context="com.example.troy.linguameethome.SearchResults">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="Results"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -56,5 +57,18 @@
         android:layout_toEndOf="@+id/imageButton3"
         android:src="@drawable/home"
         android:onClick="homeScreen" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/imageButton3"
+        android:layout_toStartOf="@+id/imageButton2"
+        android:layout_above="@+id/imageButton2"
+        android:layout_alignRight="@+id/imageButton2"
+        android:layout_alignEnd="@+id/imageButton2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

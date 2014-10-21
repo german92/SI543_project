@@ -9,9 +9,10 @@
     tools:context="com.example.troy.linguameethome.SendMessages">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="To John Doe"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -56,5 +57,30 @@
         android:layout_toEndOf="@+id/imageButton3"
         android:src="@drawable/home"
         android:onClick="homeScreen" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/imageButton2"
+        android:layout_toStartOf="@+id/imageButton2"
+        android:layout_above="@+id/button2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/button2"
+        android:layout_above="@+id/imageButton2"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton"
+        android:layout_marginBottom="77dp"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:onClick="messages" />
 
 </RelativeLayout>
