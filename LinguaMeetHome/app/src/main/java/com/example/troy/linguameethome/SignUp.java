@@ -1,9 +1,11 @@
 package com.example.troy.linguameethome;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class SignUp extends Activity {
@@ -32,5 +34,10 @@ public class SignUp extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void signUp(View view) {
+        Intent signUp_intent = new Intent(this, HomeScreen.class);
+        startActivity(signUp_intent);
     }
 }

@@ -1,9 +1,11 @@
 package com.example.troy.linguameethome;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Settings extends Activity {
@@ -33,4 +35,27 @@ public class Settings extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-}
+
+    public void homeScreen(View view) {
+
+        Intent homeScreen_intent = new Intent(this, HomeScreen.class);
+        startActivity(homeScreen_intent);
+    }
+
+    public void options(View view) {
+
+        Intent options_intent = new Intent(this, Options.class);
+        startActivity(options_intent);
+    }
+
+    public void profile(View view) {
+
+        Intent profile_intent = new Intent(this, Profile.class);
+        startActivity(profile_intent);
+    }
+
+    public void messages(View view) {
+
+        Intent messages_intent = new Intent(this, Messages.class);
+        startActivity(messages_intent);
+    }}
