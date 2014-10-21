@@ -3,9 +3,11 @@
 package com.example.troy.linguameethome;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class Login extends Activity {
@@ -44,6 +46,11 @@ public class Login extends Activity {
         return true;
     }
 
+    public boolean createUser() {
+        //Creates new user with the entered credentials
+        //Redirect to home screen
+        return true;
+    }
 
     public boolean forgotlogin() {
         //User entered valid email address
@@ -54,5 +61,17 @@ public class Login extends Activity {
     public boolean facebookLogin() {
         //user can login using facebook credentials
         return true;
+    }
+
+    public void logIn(View view){
+
+        Intent logIn_intent = new Intent(this, HomeScreen.class);
+        startActivity(logIn_intent);
+    }
+
+    public void signUp(View view) {
+
+        Intent signUp_intent = new Intent(this, SignUp.class);
+        startActivity(signUp_intent);
     }
 }

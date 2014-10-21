@@ -19,7 +19,7 @@
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="Profile" />
+        android:onClick="profile" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:src="@drawable/settings"
-        android:onClick="Settings" />
+        android:onClick="options" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:src="@drawable/chat"
-        android:onClick="Messages" />
+        android:onClick="messages" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -52,7 +52,7 @@
         android:layout_below="@+id/textView"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
-        android:onClick="Search" />
+        android:onClick="searchResults" />
 
     <EditText
         android:layout_width="wrap_content"

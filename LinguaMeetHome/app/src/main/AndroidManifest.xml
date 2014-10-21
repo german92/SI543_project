@@ -1,4 +1,3 @@
-<<<<<<< Original
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.troy.linguameethome" >
@@ -50,27 +49,17 @@
             android:label="@string/title_activity_search_results" >
         </activity>
         <activity
-            android:name=".SendMessage"
-            android:label="@string/title_activity_send_message" >
-        </activity>
-        <activity android:name=".Options" />
-        <activity
             android:name=".EditProfile"
             android:label="@string/title_activity_edit_profile" >
         </activity>
-    </application>
-
-</manifest>
-
-=======
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <application>
-        <activity android:name="com.example.troy.linguameethome.Options"
-            android:label="@string/title_activity_options"
-            >
+        <activity
+            android:name=".Options"
+            android:label="@string/title_activity_options" >
+        </activity>
+        <activity
+            android:name=".SendMessages"
+            android:label="@string/title_activity_send_messages" >
         </activity>
     </application>
 
 </manifest>
->>>>>>> Added
