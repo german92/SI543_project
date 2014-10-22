@@ -1,5 +1,4 @@
 LinguaMeet goals for the next week to 10/29/14
 
--Troy will get the Google Maps API implemented
--German will start working with the login features
--Sarah will implement an action bar
+-Our team will ensure that all activities are correctly linked and that
+there are no redundant buttons
