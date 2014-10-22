@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="6.1.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LinguaMeetHome/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.11/templates.zip!/" />
+      <root url="jar://$PROJECT_DIR$/LinguaMeetHome/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.11/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
