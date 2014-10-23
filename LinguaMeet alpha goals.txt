@@ -2,3 +2,9 @@ LinguaMeet goals for the next week to 10/29/14
 
 -Our team will ensure that all activities are correctly linked and that
 there are no redundant buttons
+
+-Troy will be examining the HomeScreen, SearchResults, Messages, and SendMessages activities
+
+-German will be reviewing the Login, Options, Settings, Privacy, and SignUp activities
+
+-Sarah will look at the EditProfile, Profile, and UserProfile activities
