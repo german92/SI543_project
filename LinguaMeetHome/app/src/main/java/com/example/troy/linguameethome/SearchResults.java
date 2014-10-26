@@ -59,4 +59,10 @@ public class SearchResults extends Activity {
         Intent messages_intent = new Intent(this, Messages.class);
         startActivity(messages_intent);
     }
+
+    public void userProfile (View view) {
+
+        Intent userProfile_intent = new Intent(this, UserProfile.class);
+        startActivity(userProfile_intent);
+    }
 }

@@ -58,17 +58,26 @@
         android:src="@drawable/home"
         android:onClick="homeScreen" />
 
-    <ScrollView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="John Doe"
+        android:id="@+id/textView2"
+        android:textSize="28dp"
         android:layout_below="@+id/textView"
-        android:layout_toEndOf="@+id/imageButton3"
-        android:layout_toStartOf="@+id/imageButton2"
-        android:layout_above="@+id/imageButton2"
-        android:layout_alignRight="@+id/imageButton2"
-        android:layout_alignEnd="@+id/imageButton2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See profile"
+        android:id="@+id/button"
+        android:layout_toStartOf="@+id/imageButton2"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toLeftOf="@+id/imageButton2"
+        android:onClick="userProfile" />
 
 </RelativeLayout>
