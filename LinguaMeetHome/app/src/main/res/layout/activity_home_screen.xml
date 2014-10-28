@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My LM"
-        android:id="@+id/button"
+        android:id="@+id/MyLM"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="profile" />
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
-        android:layout_alignTop="@+id/button"
+        android:layout_alignTop="@+id/MyLM"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton2"
-        android:layout_alignTop="@+id/button"
+        android:layout_alignTop="@+id/MyLM"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -50,8 +50,8 @@
         android:text="Go!"
         android:id="@+id/button2"
         android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
+        android:layout_alignLeft="@+id/MyLM"
+        android:layout_alignStart="@+id/MyLM"
         android:onClick="searchResults" />
 
     <EditText
@@ -67,16 +67,18 @@
         android:textSize="15dp"
         android:inputType="text" />
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Google Maps API will be here to show current location"
-        android:id="@+id/textView2"
+        android:id="@+id/imageView2"
         android:layout_below="@+id/button2"
-        android:layout_toLeftOf="@+id/imageButton2"
-        android:layout_toStartOf="@+id/imageButton2"
-        android:layout_above="@+id/button"
         android:layout_toEndOf="@+id/imageButton"
-        android:textSize="36dp" />
+        android:layout_above="@+id/MyLM"
+        android:layout_toStartOf="@+id/imageButton2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/imageButton2"
+        android:layout_alignEnd="@+id/imageButton2"
+        android:src="@drawable/map" />
 
 </RelativeLayout>

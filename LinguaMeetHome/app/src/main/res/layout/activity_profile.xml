@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My LM"
-        android:id="@+id/button"
+        android:id="@+id/MyLM"
         android:layout_alignTop="@+id/imageButton2"
         android:layout_toLeftOf="@+id/imageButton2"
         android:layout_toStartOf="@+id/imageButton2"
@@ -82,11 +82,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Details of Profile Here"
-        android:id="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:text="Age: 30"
+        android:id="@+id/textView3"
         android:layout_below="@+id/button2"
         android:layout_toRightOf="@+id/imageView"
-        android:textSize="36dp" />
+        android:textSize="28dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="I want to learn: French"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView3"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="I want to teach: Spanish"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:textSize="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Bio: Love to meet people and learn about different cultures."
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView5"
+        android:textSize="28dp" />
 
 
 
