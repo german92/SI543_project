@@ -101,7 +101,8 @@
             android:id="@+id/imageButton3"
             android:src="@drawable/settings"
             android:onClick="options"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            />
 
         <ImageButton
             android:layout_width="wrap_content"
