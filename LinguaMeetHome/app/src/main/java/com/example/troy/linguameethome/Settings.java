@@ -6,14 +6,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 
 
-public class Settings extends Activity {
+public class Settings extends Activity implements OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        themeUtils.onActivityCreateSetTheme(this);
+
+        findViewById(R.id.custom1).setOnClickListener(this);
+
+        findViewById(R.id.custom2).setOnClickListener(this);
+
+        findViewById(R.id.custom3).setOnClickListener(this);
     }
 
 
@@ -58,4 +67,29 @@ public class Settings extends Activity {
 
         Intent messages_intent = new Intent(this, Messages.class);
         startActivity(messages_intent);
-    }}
+    }
+    @Override
+
+    public void onClick(View v)
+
+    {
+
+        switch (v.getId())
+
+        {
+            case R.id.custom1:
+
+                themeUtils.changeToTheme(this, themeUtils.Custom1);
+
+                break;
+
+            case R.id.custom2:
+
+                themeUtils.changeToTheme(this, themeUtils.Custom2);
+
+                break;
+
+        }
+
+    }
+}

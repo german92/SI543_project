@@ -11,37 +11,7 @@
     tools:context=".HomeScreen">
 
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My LM"
-        android:id="@+id/MyLM"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="profile" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:layout_alignTop="@+id/MyLM"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/settings"
-        android:onClick="options" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
-        android:layout_alignTop="@+id/MyLM"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/chat"
-        android:onClick="messages" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -49,21 +19,18 @@
         android:layout_height="wrap_content"
         android:text="Go!"
         android:id="@+id/button2"
+        android:onClick="searchResults"
         android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/MyLM"
-        android:layout_alignStart="@+id/MyLM"
-        android:onClick="searchResults" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What language would you like to learn?"
+        android:hint="What language would you like to learn?"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/imageButton2"
-        android:layout_alignEnd="@+id/imageButton2"
         android:textSize="15dp"
         android:inputType="text" />
 
@@ -72,13 +39,47 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:layout_below="@+id/button2"
-        android:layout_toEndOf="@+id/imageButton"
-        android:layout_above="@+id/MyLM"
-        android:layout_toStartOf="@+id/imageButton2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/imageButton2"
-        android:layout_alignEnd="@+id/imageButton2"
-        android:src="@drawable/map" />
+        android:src="@drawable/map"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/linearLayout" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:src="@drawable/settings"
+            android:onClick="options"
+            android:layout_weight="1"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="My LM"
+            android:id="@+id/MyLM"
+            android:onClick="profile"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2"
+            android:src="@drawable/chat"
+            android:onClick="messages"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
 </RelativeLayout>
