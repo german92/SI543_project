@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Options extends Activity {
+public class Options extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

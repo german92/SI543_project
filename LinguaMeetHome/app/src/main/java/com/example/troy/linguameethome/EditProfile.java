@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class EditProfile extends Activity {
+public class EditProfile extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

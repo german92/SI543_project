@@ -21,7 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class HomeScreen extends Activity {
+public class HomeScreen extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

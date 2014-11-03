@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class SendMessages extends Activity {
+public class SendMessages extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

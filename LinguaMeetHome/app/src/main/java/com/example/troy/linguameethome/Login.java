@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Login extends Activity {
+public class Login extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
