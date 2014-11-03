@@ -14,10 +14,10 @@ public class Settings extends Activity implements OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        themeUtils.onActivityCreateSetTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        themeUtils.onActivityCreateSetTheme(this);
 
         //setOnClickListener allows a callback to be invoked when your buttons are clicked
         findViewById(R.id.custom1).setOnClickListener(this);
