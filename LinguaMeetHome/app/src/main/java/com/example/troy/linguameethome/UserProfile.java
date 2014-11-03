@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.view.View;
 
 
-public class UserProfile extends Activity {
+public class UserProfile extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

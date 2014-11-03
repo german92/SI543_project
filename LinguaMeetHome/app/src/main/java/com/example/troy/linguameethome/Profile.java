@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Profile extends Activity {
+public class Profile extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,5 +15,6 @@
     <string name="title_activity_edit_profile">EditProfile</string>
     <string name="title_activity_options">Options</string>
     <string name="title_activity_send_messages">SendMessages</string>
-
+    <string name="custom1">Theme1</string>
+    <string name="custom2">Theme2</string>
 </resources>

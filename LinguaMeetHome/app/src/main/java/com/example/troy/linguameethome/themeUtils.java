@@ -16,9 +16,9 @@ public class themeUtils
 
 
 
-    public final static int Custom1 = 0;
+    public final static int C1 = 0;
 
-    public final static int Custom2 = 1;
+    public final static int C2 = 1;
 
     public static void changeToTheme(Activity activity, int theme)
 
@@ -45,13 +45,13 @@ public class themeUtils
 
             default:
 
-            case Custom1:
+            case C1:
 
                 activity.setTheme(R.style.CustomTheme1);
 
                 break;
 
-            case Custom2:
+            case C2:
 
                 activity.setTheme(R.style.CustomTheme2);
 

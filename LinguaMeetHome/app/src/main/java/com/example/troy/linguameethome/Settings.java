@@ -79,13 +79,13 @@ public class Settings extends Activity implements OnClickListener {
         {
             case R.id.custom1:
 
-                themeUtils.changeToTheme(this, themeUtils.Custom1);
+                themeUtils.changeToTheme(this, themeUtils.C1);
 
                 break;
 
             case R.id.custom2:
 
-                themeUtils.changeToTheme(this, themeUtils.Custom2);
+                themeUtils.changeToTheme(this, themeUtils.C2);
 
                 break;
 
