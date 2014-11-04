@@ -1,5 +1,5 @@
-<resources>
 
+<resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -7,18 +7,14 @@
 
     <style name="CustomTheme1">
 
-        <item name="android:background">#99ff00</item>
+        <item name="android:background">#ffffff</item>
         <item name="android:textColor">#000000</item>
-
-
-
     </style>
 
    <style name="CustomTheme2">
 
-        <item name="android:background">#cc3300</item>
-        <item name="android:textColor">#000000</item>
-
+        <item name="android:background">#000000</item>
+        <item name="android:textColor">#ffffff</item>
     </style>
 
 <!--    <style name="CustomTheme3">
