@@ -6,7 +6,7 @@
         android:allowBackup="true"
 
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/CustomTheme1" >
         <activity
             android:name=".HomeScreen"
             android:label="Home Search Page" >
