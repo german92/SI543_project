@@ -34,7 +34,7 @@
         android:id="@+id/button2"
         android:layout_below="@+id/textView"
         android:layout_toRightOf="@+id/imageView"
-        android:onClick="messages" />
+        android:onClick="send_messages" />
 
     <TextView
         android:layout_width="wrap_content"
