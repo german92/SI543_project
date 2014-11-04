@@ -19,11 +19,11 @@
 
    </style>
 
-<!--    <style name="CustomTheme3">
+    <style name="CustomTheme3" parent="android:Theme.Black">
 
-        <item name="android:background"></item>
-        <item name="android:textColor"></item>
+        <item name="android:background">#0000ff</item>
+        <item name="android:textColor">#fbec5d</item>
 
-    </style>  -->
+    </style>
 
 </resources>

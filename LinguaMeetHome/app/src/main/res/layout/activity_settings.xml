@@ -93,23 +93,23 @@
         android:layout_below="@+id/textView2">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="@string/custom1"
             android:id="@+id/custom1"
             android:layout_weight="1"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="@string/custom2"
             android:id="@+id/custom2"
             android:layout_weight="1"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:text="Theme3"
+            android:text="@string/custom3"
             android:id="@+id/custom3"
             android:layout_weight="1"/>
     </LinearLayout>

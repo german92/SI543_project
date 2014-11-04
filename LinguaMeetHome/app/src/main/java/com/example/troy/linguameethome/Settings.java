@@ -82,6 +82,8 @@ public class Settings extends Activity implements OnClickListener {
             case R.id.custom2:
                 themeUtils.changeToTheme(this, themeUtils.C2);
                 break;
+            case R.id.custom3:
+                themeUtils.changeToTheme(this, themeUtils.C3);
         }
     }
 }

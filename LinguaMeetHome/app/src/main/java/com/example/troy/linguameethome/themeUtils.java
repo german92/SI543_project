@@ -15,6 +15,7 @@ public class themeUtils
 
     public final static int C1 = 0;
     public final static int C2 = 1;
+    public final static int C3 = 2;
     public static void changeToTheme(Activity activity, int theme)
 
     {
@@ -35,6 +36,8 @@ public class themeUtils
             case C2:
                 activity.setTheme(R.style.CustomTheme2);
                 break;
+            case C3:
+                activity.setTheme(R.style.CustomTheme3);
         }
     }
 }

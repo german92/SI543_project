@@ -20,31 +20,21 @@
         android:text="Go!"
         android:id="@+id/button2"
         android:onClick="searchResults"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:background="@drawable/circle_button_shape"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="What language would you like to learn?"
         android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="15dp"
-        android:inputType="text" />
-
-    ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:layout_below="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:src="@drawable/map"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@+id/linearLayout" />
+        android:textSize="17dp"
+        android:inputType="text"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -57,11 +47,12 @@
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:id="@+id/imageButton"
             android:src="@drawable/settings"
             android:onClick="options"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -70,16 +61,33 @@
             android:text="My LM"
             android:id="@+id/MyLM"
             android:onClick="profile"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:textSize="20dp"/>
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:id="@+id/imageButton2"
             android:src="@drawable/chat"
             android:onClick="messages"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our home page! Use the search function below to find other users near you based on your location data. We hope that you learn a new language and make new friends!"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="18dp"
+        />
 
 </RelativeLayout>
