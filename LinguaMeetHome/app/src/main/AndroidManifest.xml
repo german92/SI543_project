@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".HomeScreen"
-            android:label="@string/app_name" >
+            android:label="Home Search Page" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,7 @@
         </activity>
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile" >
+            android:label="@string/yourProfile" >
         </activity>
         <activity
             android:name=".Messages"
@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".SignUp"
-            android:label="Sign Up" >
+            android:label="Sign Up for an Account" >
         </activity>
         <activity
             android:name=".Settings"
@@ -50,7 +50,7 @@
         </activity>
         <activity
             android:name=".EditProfile"
-            android:label="Edit Profile" >
+            android:label="Edit Your Profile" >
         </activity>
         <activity
             android:name=".Options"
