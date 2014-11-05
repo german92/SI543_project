@@ -1,19 +1,24 @@
 package com.example.troy.linguameethome;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class EditProfile extends Settings {
 
+    TextView t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+        t1= ((TextView) findViewById(R.id.homeTextViewCustomFont));
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
+        t1.setTypeface(myCustomFont);
     }
 
 
@@ -63,5 +68,51 @@ public class EditProfile extends Settings {
     public void updateProfile(View view) {
         Intent updateProfile_intent = new Intent(this, Profile.class);
         startActivity(updateProfile_intent);
+    }
+
+    public void onStart(){
+        super.onStart();
+        TextView tv2=(TextView)findViewById(R.id.editText2);
+        TextView tv3=(TextView)findViewById(R.id.editText3);
+        TextView tv4=(TextView)findViewById(R.id.editText4);
+        tv2.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+            public void onFocusChange(View view, boolean hasfocus){
+                if(hasfocus){
+
+                    view.setBackgroundResource(R.drawable.focus_border_style);
+                }
+                else{
+                    view.setBackgroundResource(R.drawable.lost_focus_style);
+                }
+            }
+        });
+        tv3.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+            public void onFocusChange(View view, boolean hasfocus){
+                if(hasfocus){
+
+                    view.setBackgroundResource(R.drawable.focus_border_style);
+                }
+                else{
+                    view.setBackgroundResource(R.drawable.lost_focus_style);
+                }
+            }
+        });
+        tv4.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+            public void onFocusChange(View view, boolean hasfocus){
+                if(hasfocus){
+
+                    view.setBackgroundResource(R.drawable.focus_border_style);
+                }
+                else{
+                    view.setBackgroundResource(R.drawable.lost_focus_style);
+                }
+            }
+        });
+
+
+
     }
 }

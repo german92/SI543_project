@@ -9,24 +9,30 @@
     tools:context="com.example.troy.linguameethome.EditProfile">
 
 
-
-
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_alignParentLeft="true"
-        android:src="@drawable/profile"
+        android:src="@drawable/female"
+        android:maxWidth="1pt"
+        android:maxHeight="1pt"
+        android:background="#f4740a"
+        android:padding="4dp"
+
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jane Doe"
-        android:id="@+id/textView"
+        android:id="@+id/homeTextViewCustomFont"
         android:layout_toRightOf="@+id/imageView"
-        android:textSize="36dp" />
+        android:layout_alignBottom="@id/imageView"
+        android:layout_alignTop="@id/imageView"
+        android:layout_gravity="center_vertical"
+        android:textSize="36dp"
+        android:layout_marginLeft="15dp"  />
 
 
     <EditText
@@ -38,7 +44,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -82,10 +89,11 @@
         android:text="Update Profile"
         android:id="@+id/updateprofile"
         android:layout_below="@+id/editText4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:onClick="profile"/>
+        android:layout_alignParent="true"
+        android:layout_centerInParent="true"
+        android:onClick="profile"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -102,6 +110,7 @@
             android:src="@drawable/settings"
             android:onClick="options"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             />
 
         <ImageButton
@@ -110,7 +119,8 @@
             android:id="@+id/imageButton"
             android:src="@drawable/home"
             android:onClick="homeScreen"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -119,7 +129,8 @@
             android:text="My LM"
             android:id="@+id/MyLM"
             android:onClick="profile"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -127,7 +138,8 @@
             android:id="@+id/imageButton2"
             android:src="@drawable/chat"
             android:onClick="messages"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
     </LinearLayout>
 
