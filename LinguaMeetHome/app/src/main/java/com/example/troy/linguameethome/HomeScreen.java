@@ -15,18 +15,24 @@ package com.example.troy.linguameethome;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class HomeScreen extends Settings {
 
+    TextView t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        t1= ((TextView) findViewById(R.id.homeTextViewCustomFont));
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
+        t1.setTypeface(myCustomFont);
     }
 
 

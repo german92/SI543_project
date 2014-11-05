@@ -21,9 +21,11 @@
         android:id="@+id/button2"
         android:onClick="searchResults"
         android:background="@drawable/circle_button_shape"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"/>
+        android:textSize="40dp"
+        android:layout_marginBottom="61dp"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -32,7 +34,7 @@
         android:id="@+id/textView"
         android:textSize="17dp"
         android:inputType="text"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="56dp"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true" />
 
@@ -79,8 +81,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to our home page! Use the search function below to find other users near you based on your location data. We hope that you learn a new language and make new friends!"
-        android:id="@+id/textView2"
+        android:text="Welcome to our home page! Use the search function below to find other users near you to begin learning a language today!"
+        android:id="@+id/homeTextViewCustomFont"
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/button2"
         android:layout_alignParentLeft="true"
