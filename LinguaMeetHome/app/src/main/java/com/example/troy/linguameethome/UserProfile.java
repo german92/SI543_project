@@ -1,14 +1,13 @@
 package com.example.troy.linguameethome;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.content.Intent;
 import android.view.View;
 
 
-public class UserProfile extends Activity {
+public class UserProfile extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +53,9 @@ public class UserProfile extends Activity {
         startActivity(profile_intent);
     }
 
-    public void messages(View view) {
+    public void send_messages(View view) {
 
-        Intent messages_intent = new Intent(this, Messages.class);
+        Intent messages_intent = new Intent(this, SendMessages.class);
         startActivity(messages_intent);
     }
 }

@@ -1,14 +1,14 @@
 package com.example.troy.linguameethome;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.setContentView.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 
-public class SendMessages extends Activity {
+public class SendMessages extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

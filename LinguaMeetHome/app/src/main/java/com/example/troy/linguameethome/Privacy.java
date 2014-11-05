@@ -1,6 +1,5 @@
 package com.example.troy.linguameethome;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Privacy extends Activity {
+public class Privacy extends Settings {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
