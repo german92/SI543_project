@@ -72,8 +72,10 @@ public class EditProfile extends Settings {
 
     public void onStart(){
         super.onStart();
-        TextView tv=(TextView)findViewById(R.id.editText2);
-        tv.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+        TextView tv2=(TextView)findViewById(R.id.editText2);
+        TextView tv3=(TextView)findViewById(R.id.editText3);
+        TextView tv4=(TextView)findViewById(R.id.editText4);
+        tv2.setOnFocusChangeListener(new View.OnFocusChangeListener(){
 
             public void onFocusChange(View view, boolean hasfocus){
                 if(hasfocus){
@@ -85,6 +87,32 @@ public class EditProfile extends Settings {
                 }
             }
         });
+        tv3.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+            public void onFocusChange(View view, boolean hasfocus){
+                if(hasfocus){
+
+                    view.setBackgroundResource(R.drawable.focus_border_style);
+                }
+                else{
+                    view.setBackgroundResource(R.drawable.lost_focus_style);
+                }
+            }
+        });
+        tv4.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+
+            public void onFocusChange(View view, boolean hasfocus){
+                if(hasfocus){
+
+                    view.setBackgroundResource(R.drawable.focus_border_style);
+                }
+                else{
+                    view.setBackgroundResource(R.drawable.lost_focus_style);
+                }
+            }
+        });
+
+
 
     }
 }
