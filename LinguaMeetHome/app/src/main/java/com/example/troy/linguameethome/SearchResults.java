@@ -5,15 +5,46 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class SearchResults extends Settings {
+
+    List<Map<String, String>> peopleList = new ArrayList<Map<String, String>>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
+
+        registerForContextMenu((ListView) findViewById(R.id.listView));
+
+        initList();
+
+        ListView peopleListView = (ListView) findViewById(R.id.listView);
+        SimpleAdapter simpleAdpt = new SimpleAdapter(this, peopleList, android.R.layout.simple_list_item_1, new String[] {"person"}, new int[] {android.R.id.text1});
+        peopleListView.setAdapter(simpleAdpt);
+
     }
+
+    private void initList() {
+        peopleList.add(createPerson("person", "John Smith"));
+        peopleList.add(createPerson("person", "Sam McGee"));
+    }
+
+    private HashMap<String, String> createPerson(String key, String name) {
+        HashMap<String, String> person = new HashMap<String, String>();
+        person.put(key, name);
+        return person;
+    }
+
 
 
     @Override
@@ -64,4 +95,6 @@ public class SearchResults extends Settings {
         Intent userProfile_intent = new Intent(this, UserProfile.class);
         startActivity(userProfile_intent);
     }
+
+
 }

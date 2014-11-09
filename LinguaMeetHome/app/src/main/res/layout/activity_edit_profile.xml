@@ -89,7 +89,6 @@
         android:text="Update Profile"
         android:id="@+id/updateprofile"
         android:layout_below="@+id/editText4"
-        android:layout_alignParent="true"
         android:layout_centerInParent="true"
         android:onClick="profile"
         android:background="@drawable/rectangle_button_shape"
