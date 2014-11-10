@@ -38,6 +38,14 @@ public class SearchResults extends Settings {
     private void initList() {
         peopleList.add(createPerson("person", "John Smith"));
         peopleList.add(createPerson("person", "Sam McGee"));
+        peopleList.add(createPerson("person", "Troy Leonard"));
+        peopleList.add(createPerson("person", "Sarah Anderson"));
+        peopleList.add(createPerson("person", "German Lipiec"));
+        peopleList.add(createPerson("person", "Alex White"));
+        peopleList.add(createPerson("person", "Becca Rikowski"));
+        peopleList.add(createPerson("person", "Rich Savage"));
+        peopleList.add(createPerson("person", "Tara Strohmeyer"));
+        peopleList.add(createPerson("person", "Lucy Krauss"));
     }
 
     private HashMap<String, String> createPerson(String key, String name) {
