@@ -88,7 +88,8 @@
             android:id="@+id/imageButton3"
             android:src="@drawable/settings"
             android:onClick="options"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -96,7 +97,8 @@
             android:id="@+id/imageButton"
             android:src="@drawable/home"
             android:onClick="homeScreen"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -105,7 +107,8 @@
             android:text="My LM"
             android:id="@+id/MyLM"
             android:onClick="profile"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -113,7 +116,8 @@
             android:id="@+id/imageButton2"
             android:src="@drawable/chat"
             android:onClick="messages"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         </LinearLayout>
 
