@@ -37,12 +37,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log Out"
-        android:id="@+id/button6"
+        android:id="@+id/alertButton"
         android:layout_below="@+id/button5"
         android:layout_alignLeft="@+id/button5"
         android:layout_alignStart="@+id/button5"
-        android:layout_marginTop="42dp"
-        android:onClick="logOut"/>
+        android:layout_marginTop="42dp" />
+    <!--    android:onClick="logOut" -->
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -59,6 +60,7 @@
             android:src="@drawable/home"
             android:onClick="homeScreen"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             />
 
         <Button
@@ -68,7 +70,8 @@
             android:text="My LM"
             android:id="@+id/MyLM"
             android:onClick="profile"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -76,7 +79,8 @@
             android:id="@+id/imageButton2"
             android:src="@drawable/chat"
             android:onClick="messages"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
 
 
     </LinearLayout>
