@@ -37,12 +37,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log Out"
-        android:id="@+id/button6"
+        android:id="@+id/alertButton"
         android:layout_below="@+id/button5"
         android:layout_alignLeft="@+id/button5"
         android:layout_alignStart="@+id/button5"
-        android:layout_marginTop="42dp"
-        android:onClick="logOut"/>
+        android:layout_marginTop="42dp" />
+    <!--    android:onClick="logOut" -->
+
 
     <LinearLayout
         android:orientation="horizontal"

@@ -2,17 +2,68 @@ package com.example.troy.linguameethome;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.content.DialogInterface;
 
 
 public class Options extends Settings {
 
+
+
+    final Context context = this;
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
+
+        button = (Button) findViewById(R.id.alertButton);
+
+        // add button listener
+        button.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        context);
+
+                alertDialogBuilder.setTitle(Html.fromHtml("<font color=#000000>Log Out</font>"));
+
+                alertDialogBuilder
+                        .setMessage(Html.fromHtml("<font color=#000000>Are you sure you want to log out?</font>"))
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, close
+                                // current activity and start log in activity
+                                Options.this.finish();
+                                Intent log_out = new Intent(getApplicationContext(),com.example.troy.linguameethome.Login.class);
+                                startActivity(log_out);
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // if this button is clicked, just close
+                                // the dialog box and do nothing
+                                dialog.cancel();
+                            }
+                        });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+            }
+        });
     }
 
 
