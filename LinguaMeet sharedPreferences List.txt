@@ -1,0 +1,5 @@
+LinguaMeet sharedPreferences list:
+    1. Login page (doable for final app)
+    2. Edit profile page (doable for final app)
+    3. Store settings for current theme selected (possibly, not a huge priority)
+    4. Search results listView to bring up users who can teach a specific language (out of scope of class; database would need to be used for this)
