@@ -2,19 +2,48 @@
 
 package com.example.troy.linguameethome;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.content.SharedPreferences;
+import android.content.Context;
+import android.content.SharedPreferences.Editor;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.Map;
 
 
 public class Login extends Settings {
-
+    private EditText username;
+    public static final String name ="userKey";
+    public static final String password = "passwordKey";
+    private Button loginButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = mySharedPreferences.edit();
+        editor.putString("user", "Troy");
+        editor.putString("user", "Sarah");
+        editor.putString("user", "German");
+        editor.apply();
+        username= (EditText) findViewById(R.id.editText);
+        loginButton=(Button) findViewById(R.id.MyLM);
+        loginButton.setOnClickListener(this);
+
+
+        // String currentUserPreference = mySharedPreferences.getString("user", "");
+
+
+
     }
 
 
