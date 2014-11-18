@@ -31,28 +31,12 @@ public class Login extends Settings {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-       /* final SharedPreferences pref = getSharedPreferences("LMPrefs", 0);
-        Editor editor = pref.edit();
-        editor.putString("username", "Troy");
-        editor.putString("username", "Sarah");
-        editor.putString("username", "German");
-        editor.putString("password", "stuff");
-        editor.apply();
-        // Email, password edittext */
-
-
-
-
             session = new SessionManagement(getApplicationContext());
-
+            session.clearData();
             txtUsername = (EditText) findViewById(R.id.txtUsername);
             txtPassword = (EditText) findViewById(R.id.txtPassword);
 
-            Toast.makeText(getApplicationContext(), "User Login Status: " + session.isLoggedIn(), Toast.LENGTH_LONG).show();
-
-
             btnLogin = (Button) findViewById(R.id.btnLogin);
-
 
             btnLogin.setOnClickListener(new View.OnClickListener() {
 
@@ -67,9 +51,6 @@ public class Login extends Settings {
                     if(username.trim().length() > 0 && password.trim().length() > 0){
                         if(username.equals("Troy") && password.equals("stuff"))  {
 
-
-
-                                // Staring MainActivity
                                 Intent i = new Intent(getApplicationContext(), HomeScreen.class);
                                 startActivity(i);
                                 finish();
@@ -79,8 +60,7 @@ public class Login extends Settings {
                             alert.showAlertDialog(Login.this, "Login failed..", "Username/Password is incorrect", false);
                         }
                     }else{
-                        // user didn't entered username or password
-                        // Show alert asking him to enter the details
+                        // user didn't enter username or password
                         alert.showAlertDialog(Login.this, "Login failed..", "Please enter username and password", false);
                     }
 

@@ -1,6 +1,7 @@
 package com.example.troy.linguameethome;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.Menu;
@@ -14,18 +15,14 @@ import android.content.DialogInterface;
 
 
 public class Options extends Settings {
-
-
-
+    SessionManagement session;
     final Context context = this;
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
-
         button = (Button) findViewById(R.id.alertButton);
-
         // add button listener
         button.setOnClickListener(new OnClickListener() {
 
@@ -44,9 +41,11 @@ public class Options extends Settings {
                             public void onClick(DialogInterface dialog,int id) {
                                 // if this button is clicked, close
                                 // current activity and start log in activity
-                                Options.this.finish();
                                 Intent log_out = new Intent(getApplicationContext(),com.example.troy.linguameethome.Login.class);
                                 startActivity(log_out);
+                                Options.this.finish();
+
+
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {

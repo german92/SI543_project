@@ -50,6 +50,12 @@ public class SessionManagement {
 
     }
 
+    public void clearData(){
+        // Clearing all data from Shared Preferences
+        editor.clear();
+        editor.apply();
+
+    }
 
     public HashMap<String, String> getUserDetails(){
         HashMap<String, String> user = new HashMap<String, String>();

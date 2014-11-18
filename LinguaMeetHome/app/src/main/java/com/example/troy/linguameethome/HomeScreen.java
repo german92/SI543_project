@@ -37,9 +37,6 @@ public class HomeScreen extends Settings {
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
         t1.setTypeface(myCustomFont);
         session = new SessionManagement(getApplicationContext());
-
-        Toast.makeText(getApplicationContext(), "User Login Status: " + session.isLoggedIn(), Toast.LENGTH_LONG).show();
-
         session.checkLogin();
 
         // get user data from session
