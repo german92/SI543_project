@@ -34,11 +34,6 @@ public class SessionManagement {
         editor.apply();
     }
 
-    public void createLoginSession(String name, String password){
-
-
-    }
-
 
     public void checkLogin(){
         if(!this.isLoggedIn()){
@@ -67,16 +62,6 @@ public class SessionManagement {
         return user;
     }
 
-
-    public void logoutUser(){
-        editor.clear();
-        editor.commit();
-
-        Intent i = new Intent(_context, Login.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        _context.startActivity(i);
-    }
 
 
     public boolean isLoggedIn(){
