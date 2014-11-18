@@ -16,35 +16,81 @@ import android.content.SharedPreferences.Editor;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Map;
 
 
 public class Login extends Settings {
-    private EditText username;
-    public static final String name ="userKey";
-    public static final String password = "passwordKey";
-    private Button loginButton;
+    EditText txtUsername, txtPassword;
+    Button btnLogin;
+    final AlertDialogManager alert = new AlertDialogManager();
+    SessionManagement session;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        SharedPreferences mySharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        SharedPreferences.Editor editor = mySharedPreferences.edit();
-        editor.putString("user", "Troy");
-        editor.putString("user", "Sarah");
-        editor.putString("user", "German");
+
+       /* final SharedPreferences pref = getSharedPreferences("LMPrefs", 0);
+        Editor editor = pref.edit();
+        editor.putString("username", "Troy");
+        editor.putString("username", "Sarah");
+        editor.putString("username", "German");
+        editor.putString("password", "stuff");
         editor.apply();
-        username= (EditText) findViewById(R.id.editText);
-        loginButton=(Button) findViewById(R.id.MyLM);
-        loginButton.setOnClickListener(this);
-
-
-        // String currentUserPreference = mySharedPreferences.getString("user", "");
+        // Email, password edittext */
 
 
 
-    }
+
+            session = new SessionManagement(getApplicationContext());
+
+            txtUsername = (EditText) findViewById(R.id.txtUsername);
+            txtPassword = (EditText) findViewById(R.id.txtPassword);
+
+            Toast.makeText(getApplicationContext(), "User Login Status: " + session.isLoggedIn(), Toast.LENGTH_LONG).show();
+
+
+            btnLogin = (Button) findViewById(R.id.btnLogin);
+
+
+            btnLogin.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View arg0) {
+                    // Get username, password from EditText
+                    String username = txtUsername.getText().toString();
+                    String password = txtPassword.getText().toString();
+
+                    // Check if username, password is filled
+
+                    if(username.trim().length() > 0 && password.trim().length() > 0){
+                        if(username.equals("Troy") && password.equals("stuff"))  {
+
+
+
+                                // Staring MainActivity
+                                Intent i = new Intent(getApplicationContext(), HomeScreen.class);
+                                startActivity(i);
+                                finish();
+
+                        }else{
+                            // username / password doesn't match
+                            alert.showAlertDialog(Login.this, "Login failed..", "Username/Password is incorrect", false);
+                        }
+                    }else{
+                        // user didn't entered username or password
+                        // Show alert asking him to enter the details
+                        alert.showAlertDialog(Login.this, "Login failed..", "Please enter username and password", false);
+                    }
+
+                }
+            });
+        }
+
+
+
+
 
 
     @Override
