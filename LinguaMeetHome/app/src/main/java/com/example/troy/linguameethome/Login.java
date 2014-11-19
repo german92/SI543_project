@@ -2,20 +2,75 @@
 
 package com.example.troy.linguameethome;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.content.SharedPreferences;
+import android.content.Context;
+import android.content.SharedPreferences.Editor;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.Map;
 
 
 public class Login extends Settings {
-
+    EditText txtUsername, txtPassword;
+    Button btnLogin;
+    final AlertDialogManager alert = new AlertDialogManager();
+    SessionManagement session;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-    }
+
+            session = new SessionManagement(getApplicationContext());
+            session.clearData();
+            txtUsername = (EditText) findViewById(R.id.txtUsername);
+            txtPassword = (EditText) findViewById(R.id.txtPassword);
+
+            btnLogin = (Button) findViewById(R.id.btnLogin);
+
+            btnLogin.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View arg0) {
+                    // Get username, password from EditText
+                    String username = txtUsername.getText().toString();
+                    String password = txtPassword.getText().toString();
+
+                    // Check if username, password is filled
+
+                    if(username.trim().length() > 0 && password.trim().length() > 0){
+                        if(username.equals("Troy") && password.equals("stuff"))  {
+
+                                Intent i = new Intent(getApplicationContext(), HomeScreen.class);
+                                startActivity(i);
+                                finish();
+
+                        }else{
+                            // username / password doesn't match
+                            alert.showAlertDialog(Login.this, "Login failed..", "Username/Password is incorrect", false);
+                        }
+                    }else{
+                        // user didn't enter username or password
+                        alert.showAlertDialog(Login.this, "Login failed..", "Please enter username and password", false);
+                    }
+
+                }
+            });
+        }
+
+
+
+
 
 
     @Override

@@ -20,10 +20,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.HashMap;
 
 
 public class HomeScreen extends Settings {
-
+    AlertDialogManager alert = new AlertDialogManager();
+    SessionManagement session;
     TextView t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,13 @@ public class HomeScreen extends Settings {
         t1= ((TextView) findViewById(R.id.homeTextViewCustomFont));
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
         t1.setTypeface(myCustomFont);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
+
+        // get user data from session
+        HashMap<String, String> user = session.getUserDetails();
+        String name = user.get(SessionManagement.KEY_NAME);
+        String email = user.get(SessionManagement.KEY_PASSWORD);
     }
 
 
