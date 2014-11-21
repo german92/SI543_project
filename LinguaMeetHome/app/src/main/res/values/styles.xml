@@ -1,6 +1,10 @@
 
 <resources>
+    <!-- custom attributes for setting drawable based on theme -->
+    <attr name="homeButton" format="reference" />
     <attr name="settingsButton" format="reference" />
+    <attr name="chatButton" format ="reference" />
+    <attr name="MyLMFontColor" format="color" />
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -12,13 +16,19 @@
         <item name="android:textColor">#000000</item>
         <item name="android:icon">@android:color/transparent</item>
         <item name="settingsButton">@drawable/settings</item>
+        <item name="homeButton">@drawable/home</item>
+        <item name="chatButton">@drawable/chat</item>
+        <item name="MyLMFontColor">#000000</item>
     </style>
 
-   <style name="CustomTheme2" parent="android:Theme.Black">
+    <style name="CustomTheme2" parent="android:Theme.Black">
 
         <item name="android:background">#000000</item>
         <item name="android:textColor">#ffffff</item>
-       <item name="settingsButton">@drawable/settings_white</item>
+        <item name="settingsButton">@drawable/settings_white</item>
+        <item name="homeButton">@drawable/home_white</item>
+        <item name="chatButton">@drawable/chat_white</item>
+        <item name="MyLMFontColor">#ffffff</item>
 
    </style>
 
@@ -27,6 +37,9 @@
         <item name="android:background">#00008b</item>
         <item name="android:textColor">#fbec5d</item>
         <item name="settingsButton">@drawable/settings</item>
+        <item name="homeButton">@drawable/home</item>
+        <item name="chatButton">@drawable/chat</item>
+        <item name="MyLMFontColor">#000000</item>
 
     </style>
 

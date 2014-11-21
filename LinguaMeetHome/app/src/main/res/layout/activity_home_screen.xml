@@ -65,13 +65,14 @@
             android:onClick="profile"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:textColor="?attr/MyLMFontColor" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:id="@+id/imageButton2"
-            android:src="@drawable/chat"
+            android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
             android:background="@android:color/transparent"/>
