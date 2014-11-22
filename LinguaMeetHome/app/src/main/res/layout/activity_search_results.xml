@@ -32,17 +32,6 @@
         android:layout_above="@+id/linearLayout">
     </ListView>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="See profile"
-        android:id="@+id/button"
-        android:onClick="userProfile"
-        android:layout_marginRight="58dp"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <LinearLayout
         android:orientation="horizontal"

@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,6 +32,16 @@ public class SearchResults extends Settings {
         ListView peopleListView = (ListView) findViewById(R.id.listView);
         SimpleAdapter simpleAdpt = new SimpleAdapter(this, peopleList, android.R.layout.simple_list_item_1, new String[] {"person"}, new int[] {android.R.id.text1});
         peopleListView.setAdapter(simpleAdpt);
+        peopleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            // this sets it so that when an item is clicked in the ListView, the user is brought to the UserProfile activity
+            public void onItemClick(AdapterView <?> parentAdapter, View view, int position,
+                                    long id) {
+
+                Intent mainIntent = new Intent(SearchResults.this,
+                        UserProfile.class);
+                startActivity(mainIntent);
+            }
+        });
 
     }
 
@@ -53,6 +63,7 @@ public class SearchResults extends Settings {
         person.put(key, name);
         return person;
     }
+
 
 
     @Override

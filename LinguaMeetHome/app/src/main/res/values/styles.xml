@@ -34,12 +34,12 @@
 
     <style name="CustomTheme3" parent="android:Theme.Black">
 
-        <item name="android:background">#00008b</item>
-        <item name="android:textColor">#fbec5d</item>
-        <item name="settingsButton">@drawable/settings</item>
-        <item name="homeButton">@drawable/home</item>
-        <item name="chatButton">@drawable/chat</item>
-        <item name="MyLMFontColor">#000000</item>
+        <item name="android:background">#00274c</item>
+        <item name="android:textColor">#ffcb05</item>
+        <item name="settingsButton">@drawable/settings_maize</item>
+        <item name="homeButton">@drawable/home_maize</item>
+        <item name="chatButton">@drawable/chat_maize</item>
+        <item name="MyLMFontColor">#ffcb05</item>
 
     </style>
 
