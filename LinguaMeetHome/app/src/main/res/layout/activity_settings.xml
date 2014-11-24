@@ -103,6 +103,9 @@
             android:text="@string/custom1"
             android:id="@+id/custom1"
             android:layout_weight="1"
+            android:background="@drawable/rectangle_button_shape"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
             />
 
         <Button
@@ -111,6 +114,9 @@
             android:text="@string/custom2"
             android:id="@+id/custom2"
             android:layout_weight="1"
+            android:background="@drawable/rectangle_button_shape"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
             />
 
         <Button
@@ -119,6 +125,9 @@
             android:text="@string/custom3"
             android:id="@+id/custom3"
             android:layout_weight="1"
+            android:background="@drawable/rectangle_button_shape"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
             />
     </LinearLayout>
 

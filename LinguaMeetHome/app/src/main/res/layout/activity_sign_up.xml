@@ -94,6 +94,8 @@
         android:layout_alignRight="@+id/editText7"
         android:layout_alignEnd="@+id/editText7"
         android:layout_marginTop="65dp"
-        android:onClick="signUp"/>
+        android:onClick="signUp"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"/>
 
 </RelativeLayout>
