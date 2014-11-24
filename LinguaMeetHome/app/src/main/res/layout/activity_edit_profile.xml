@@ -111,6 +111,7 @@
             android:onClick="options"
             android:layout_weight="1"
             android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
             />
 
         <ImageButton
@@ -120,7 +121,8 @@
             android:src="?attr/homeButton"
             android:onClick="homeScreen"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"/>
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -131,7 +133,8 @@
             android:onClick="profile"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:textColor="?attr/MyLMFontColor" />
+            android:textColor="?attr/MyLMFontColor"
+            android:scaleType="fitCenter"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -140,7 +143,9 @@
             android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            />
 
     </LinearLayout>
 
