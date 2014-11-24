@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LinguaMeet uses location data to find other users close to you. This information is not shared with any third parties whatsoever. We like our privacy, and it is therefore pertinent that we respect yours."
-        android:id="@+id/textView"
+        android:id="@+id/privacyStatement"
         android:layout_marginTop="74dp"
         android:textSize="25dp"
         android:layout_alignParentTop="true"

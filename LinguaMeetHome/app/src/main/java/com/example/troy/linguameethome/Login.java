@@ -121,11 +121,13 @@ public class Login extends Settings {
 
         Intent logIn_intent = new Intent(this, HomeScreen.class);
         startActivity(logIn_intent);
+        finish();
     }
 
     public void signUp(View view) {
 
         Intent signUp_intent = new Intent(this, SignUp.class);
         startActivity(signUp_intent);
+        finish();
     }
 }
