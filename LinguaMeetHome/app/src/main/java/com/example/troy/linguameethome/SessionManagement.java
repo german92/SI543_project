@@ -52,7 +52,7 @@ public class SessionManagement {
 
     public void clearData(){
         // Clearing all data from Shared Preferences
-        editor.clear();
+        editor.remove(IS_LOGIN);
         editor.apply();
 
     }
