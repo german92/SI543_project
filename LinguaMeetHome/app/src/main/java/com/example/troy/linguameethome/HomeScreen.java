@@ -41,13 +41,13 @@ public class HomeScreen extends Settings {
         t1= ((TextView) findViewById(R.id.homeTextViewCustomFont));
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
         t1.setTypeface(myCustomFont);
-        session = new SessionManagement(getApplicationContext());
-        session.checkLogin();
+        //session = new SessionManagement(getApplicationContext());
+        //session.checkLogin();
 
         // get user data from session
-        HashMap<String, String> user = session.getUserDetails();
-        String name = user.get(SessionManagement.KEY_NAME);
-        String email = user.get(SessionManagement.KEY_PASSWORD);
+        //HashMap<String, String> user = session.getUserDetails();
+        //String name = user.get(SessionManagement.KEY_NAME);
+        //String email = user.get(SessionManagement.KEY_PASSWORD);
     }
 
 

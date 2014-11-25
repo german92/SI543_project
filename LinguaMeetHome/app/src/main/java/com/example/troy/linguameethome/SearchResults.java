@@ -36,20 +36,19 @@ public class SearchResults extends Settings {
         peopleListView.setAdapter(simpleAdpt);
 
         peopleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            // this sets it so that when an item is clicked in the ListView, the user is brought to the UserProfile activity
+
             public void onItemClick(AdapterView <?> parentAdapter, View view, int position,
                                     long id) {
 
-                public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
-                long id) {
+
                     openProfile(id);
                 }
-            }
-        });
+            });
+        }
 
         private void initList() {
 
-            List<Person> people = SessionManagement.getPersonList(this, "teams");
+            List<Person> people = SessionManagement.getPersonList(this, "people");
 
             for(Person p: people) {
 
@@ -59,7 +58,7 @@ public class SearchResults extends Settings {
 
         }
 
-    }
+
 
 
     private HashMap<String, String> createPerson(String key, Person p) {
@@ -110,8 +109,6 @@ public class SearchResults extends Settings {
     public void profile(View view) {
 
         Intent profile_intent = new Intent(this, Profile.class);
-        String message = String.valueOf(id);
-        intent.putExtra(EXTRA_MESSAGE);
         startActivity(profile_intent);
     }
 
