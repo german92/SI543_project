@@ -16,6 +16,8 @@ import java.util.Map;
 
 public class SearchResults extends Settings {
 
+    public final static String EXTRA_MESSAGE = "com.example.troy.linguameethome";
+
     List<Map<String, String>> peopleList = new ArrayList<Map<String, String>>();
 
 
@@ -32,34 +34,37 @@ public class SearchResults extends Settings {
         ListView peopleListView = (ListView) findViewById(R.id.listView);
         SimpleAdapter simpleAdpt = new SimpleAdapter(this, peopleList, android.R.layout.simple_list_item_1, new String[] {"person"}, new int[] {android.R.id.text1});
         peopleListView.setAdapter(simpleAdpt);
+
         peopleListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             // this sets it so that when an item is clicked in the ListView, the user is brought to the UserProfile activity
             public void onItemClick(AdapterView <?> parentAdapter, View view, int position,
                                     long id) {
 
-                Intent mainIntent = new Intent(SearchResults.this,
-                        UserProfile.class);
-                startActivity(mainIntent);
+                public void onItemClick(AdapterView<?> parentAdapter, View view, int position,
+                long id) {
+                    openProfile(id);
+                }
             }
         });
 
+        private void initList() {
+
+            List<Person> teams = SessionManagement.getPeopleList()List(this, "teams");
+
+            for(Person p: people) {
+
+                peopleList.add(createPerson("person", p));
+
+            }
+
+        }
+
     }
 
-    private void initList() {
-        peopleList.add(createPerson("person", "John Smith"));
-        peopleList.add(createPerson("person", "Sam McGee"));
-        peopleList.add(createPerson("person", "Troy Leonard"));
-        peopleList.add(createPerson("person", "Sarah Anderson"));
-        peopleList.add(createPerson("person", "German Lipiec"));
-        peopleList.add(createPerson("person", "Alex White"));
-        peopleList.add(createPerson("person", "Becca Rikowski"));
-        peopleList.add(createPerson("person", "Rich Savage"));
-        peopleList.add(createPerson("person", "Tara Strohmeyer"));
-        peopleList.add(createPerson("person", "Lucy Krauss"));
-    }
 
-    private HashMap<String, String> createPerson(String key, String name) {
+    private HashMap<String, String> createPerson(String key, Person p) {
         HashMap<String, String> person = new HashMap<String, String>();
+        String name = p.getName();
         person.put(key, name);
         return person;
     }
@@ -100,6 +105,8 @@ public class SearchResults extends Settings {
     public void profile(View view) {
 
         Intent profile_intent = new Intent(this, Profile.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE);
         startActivity(profile_intent);
     }
 

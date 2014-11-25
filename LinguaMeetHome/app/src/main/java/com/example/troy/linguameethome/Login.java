@@ -19,59 +19,47 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 
 public class Login extends Settings {
-    EditText txtUsername, txtPassword;
-    Button btnLogin;
+
     final AlertDialogManager alert = new AlertDialogManager();
-    SessionManagement session;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-            session = new SessionManagement(getApplicationContext());
-            session.clearData();
-            txtUsername = (EditText) findViewById(R.id.txtUsername);
-            txtPassword = (EditText) findViewById(R.id.txtPassword);
-
-            btnLogin = (Button) findViewById(R.id.btnLogin);
-
-            btnLogin.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View arg0) {
-                    // Get username, password from EditText
-                    String username = txtUsername.getText().toString();
-                    String password = txtPassword.getText().toString();
-
-                    // Check if username, password is filled
-
-                    if(username.trim().length() > 0 && password.trim().length() > 0){
-                        if(username.equals("Troy") && password.equals("stuff"))  {
-
-                                Intent i = new Intent(getApplicationContext(), HomeScreen.class);
-                                startActivity(i);
-                                finish();
-
-                        }else{
-                            // username / password doesn't match
-                            alert.showAlertDialog(Login.this, "Login failed..", "Username/Password is incorrect", false);
-                        }
-                    }else{
-                        // user didn't enter username or password
-                        alert.showAlertDialog(Login.this, "Login failed..", "Please enter username and password", false);
-                    }
-
-                }
-            });
-        }
+        initData();
+    }
 
 
+    private void initData() {
 
+        List<Person> peopleList = new ArrayList<Person>();
 
+        String defaultDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do" +
+                " eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam," +
+                " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." +
+                " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu " +
+                "fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in " +
+                "culpa qui officia deserunt mollit anim id est laborum.";
 
+        peopleList.add(new Person("John Smith", defaultDescription));
+        peopleList.add(new Person("Sam McGee", defaultDescription));
+        peopleList.add(new Person("Troy Leonard", defaultDescription));
+        peopleList.add(new Person("Sarah Anderson", defaultDescription));
+        peopleList.add(new Person("German Lipiec", defaultDescription));
+        peopleList.add(new Person("Alex White", defaultDescription));
+        peopleList.add(new Person("Becca Rikowski", defaultDescription));
+        peopleList.add(new Person("Rich Savage", defaultDescription));
+        peopleList.add(new Person("Tara Strohmeyer", defaultDescription));
+        peopleList.add(new Person("Lucy Krauss", defaultDescription));
+
+        SessionManagement.putPersonList(this, "people", peopleList);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

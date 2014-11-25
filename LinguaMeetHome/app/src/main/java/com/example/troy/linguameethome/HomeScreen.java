@@ -22,11 +22,16 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class HomeScreen extends Settings {
-    AlertDialogManager alert = new AlertDialogManager();
+
+    public final static String EXTRA_MESSAGE = "com.example.troy.linguameethome.MESSAGE";
+    List<Map<String, String>> userList = new ArrayList<Map<String,String>>();
     SessionManagement session;
     TextView t1;
     @Override
