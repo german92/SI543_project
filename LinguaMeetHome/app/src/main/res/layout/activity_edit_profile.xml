@@ -124,11 +124,11 @@
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"/>
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="My LM"
+            android:src="@drawable/logo_lm"
             android:id="@+id/MyLM"
             android:onClick="profile"
             android:layout_weight="1"

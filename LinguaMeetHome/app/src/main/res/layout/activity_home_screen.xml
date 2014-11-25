@@ -56,11 +56,11 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"/>
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="My LM"
+            android:src="?attr/homeButton"
             android:id="@+id/MyLM"
             android:onClick="profile"
             android:layout_weight="1"
@@ -70,7 +70,7 @@
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
             android:src="?attr/chatButton"
             android:onClick="messages"
