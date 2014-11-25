@@ -49,7 +49,7 @@ public class SearchResults extends Settings {
 
         private void initList() {
 
-            List<Person> teams = SessionManagement.getPeopleList()List(this, "teams");
+            List<Person> people = SessionManagement.getPersonList(this, "teams");
 
             for(Person p: people) {
 
@@ -69,7 +69,12 @@ public class SearchResults extends Settings {
         return person;
     }
 
-
+    public void openProfile(long id) {
+        Intent intent = new Intent(this, UserProfile.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
