@@ -1,0 +1,13 @@
+To-do for final app:
+
+German
+    -Redesign buttons; new profile button
+    -Implement sharedpreferences for SendMessages and Messages activities
+    
+Sarah
+    -Implement fragment across activities for navigation buttons for consistency
+    
+Troy
+    -Add description to SearchResults 
+    -Look at overall design to ensure consistency
+    -Remove buttons that lead to functionality that will not be implemented for the final
