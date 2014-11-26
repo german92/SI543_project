@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_alignParentLeft="true"
-        android:src="@drawable/profile"
+        android:src="@drawable/female"
         />
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_alignParentLeft="true"
         android:text="Age: 25"
         android:id="@+id/textView3"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/imageView"
         android:layout_toRightOf="@+id/imageView"
         android:textSize="28dp" />
 
