@@ -57,7 +57,8 @@
             android:src="?attr/settingsButton"
             android:onClick="options"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -66,7 +67,8 @@
             android:src="?attr/homeButton"
             android:onClick="homeScreen"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
         <ImageButton
             style="?android:attr/buttonStyleSmall"
@@ -77,7 +79,7 @@
             android:onClick="profile"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-             />
+            android:layout_gravity="center" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -86,7 +88,8 @@
             android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
         </LinearLayout>
 
