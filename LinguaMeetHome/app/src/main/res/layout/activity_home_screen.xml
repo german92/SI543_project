@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:hint="What language would you like to learn?"
         android:id="@+id/textView"
-        android:textSize="17dp"
+        android:textSize="15dp"
         android:inputType="text"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
