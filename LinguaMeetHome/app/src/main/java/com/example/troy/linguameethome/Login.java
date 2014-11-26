@@ -46,16 +46,16 @@ public class Login extends Settings {
                 "fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in " +
                 "culpa qui officia deserunt mollit anim id est laborum.";
 
-        peopleList.add(new Person("John Smith", defaultDescription));
-        peopleList.add(new Person("Sam McGee", defaultDescription));
-        peopleList.add(new Person("Troy Leonard", defaultDescription));
-        peopleList.add(new Person("Sarah Anderson", defaultDescription));
-        peopleList.add(new Person("German Lipiec", defaultDescription));
-        peopleList.add(new Person("Alex White", defaultDescription));
-        peopleList.add(new Person("Becca Rikowski", defaultDescription));
-        peopleList.add(new Person("Rich Savage", defaultDescription));
-        peopleList.add(new Person("Tara Strohmeyer", defaultDescription));
-        peopleList.add(new Person("Lucy Krauss", defaultDescription));
+        peopleList.add(new Person("John Smith", "Just your average Joe looking for some language practice."));
+        peopleList.add(new Person("Sam McGee", "I'm from TN, my favorite travel destination is the Yukon, and Robert Service is my favorite poet. "));
+        peopleList.add(new Person("Troy Leonard", "MSI Grad Student. Generally awesome."));
+        peopleList.add(new Person("Sarah Anderson", "MSI/MPP. Dua te praktikuar shqipen time!"));
+        peopleList.add(new Person("German Lipiec", "BSI that likes to jetset and make logos."));
+        peopleList.add(new Person("Alex White", "I like hunting and fishing and high tea."));
+        peopleList.add(new Person("Becca Rikowski", "Trying to learn Spanish before my backpacking trip to South America"));
+        peopleList.add(new Person("Rich Savage", "Polyglot currently trying to master Kazahk."));
+        peopleList.add(new Person("Tara Strohmeyer", "Linguist and language lover at heart, CSR by day."));
+        peopleList.add(new Person("Lucy Krauss", "Studied abroad in Milan a year ago.  Miss having one-on-one conversations in Italian and Spanish!"));
 
         SessionManagement.putPersonList(this, "people", peopleList);
 
