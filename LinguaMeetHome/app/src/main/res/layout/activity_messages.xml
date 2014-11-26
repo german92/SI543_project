@@ -39,16 +39,16 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"/>
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:text="My LM"
+            android:src="?attr/profileButton"
             android:id="@+id/MyLM"
             android:onClick="profile"
             android:layout_gravity="bottom"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:textColor="?attr/MyLMFontColor" />
+             />
 
     </LinearLayout>
 

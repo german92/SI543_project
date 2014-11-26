@@ -11,7 +11,7 @@
     tools:context=".Login">
 
 
-    <TextView
+    TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Login:"
+        android:text=""
         android:id="@+id/textView2"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
@@ -102,5 +102,12 @@
         android:background="@drawable/rectangle_button_shape"
         android:textColor="#ffffff"
         android:onClick="signUp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/full_logo"/>
 
 </RelativeLayout>

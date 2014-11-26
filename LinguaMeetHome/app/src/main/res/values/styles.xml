@@ -4,7 +4,7 @@
     <attr name="homeButton" format="reference" />
     <attr name="settingsButton" format="reference" />
     <attr name="chatButton" format ="reference" />
-    <attr name="MyLMFontColor" format="color" />
+    <attr name="profileButton" format="reference" />
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -18,7 +18,7 @@
         <item name="settingsButton">@drawable/settings</item>
         <item name="homeButton">@drawable/home</item>
         <item name="chatButton">@drawable/chat</item>
-        <item name="MyLMFontColor">#000000</item>
+        <item name="profileButton">@drawable/logo_lm</item>
     </style>
 
     <style name="CustomTheme2" parent="android:Theme.Black">
@@ -28,7 +28,7 @@
         <item name="settingsButton">@drawable/settings_white</item>
         <item name="homeButton">@drawable/home_white</item>
         <item name="chatButton">@drawable/chat_white</item>
-        <item name="MyLMFontColor">#ffffff</item>
+        <item name="profileButton">@drawable/logo_lm_dark</item>
 
    </style>
 
@@ -39,7 +39,7 @@
         <item name="settingsButton">@drawable/settings_maize</item>
         <item name="homeButton">@drawable/home_maize</item>
         <item name="chatButton">@drawable/chat_maize</item>
-        <item name="MyLMFontColor">#ffcb05</item>
+        <item name="profileButton">@drawable/logo_lm_maize</item>
 
     </style>
 
