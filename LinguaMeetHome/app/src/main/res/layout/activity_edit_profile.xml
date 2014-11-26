@@ -127,7 +127,7 @@
         <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:src="?attr/profileButton"
             android:id="@+id/MyLM"
             android:onClick="profile"
@@ -139,7 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
-            android:src="@drawable/logo_message"
+            android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
             android:background="@android:color/transparent"
