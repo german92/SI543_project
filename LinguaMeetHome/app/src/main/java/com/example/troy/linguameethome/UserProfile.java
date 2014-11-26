@@ -5,14 +5,44 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+import java.util.List;
 
 
 public class UserProfile extends Settings {
-
+    int personId;
+    List<Person> peopleList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+        initList();
+
+        // Get the message from the intent
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(SearchResults.EXTRA_MESSAGE);
+
+        personId = (int) Long.parseLong(message);
+
+        // Create the text view
+        TextView textView = (TextView) findViewById(R.id.userNameTxtV);
+        textView.setText(peopleList.get(personId).getName());
+        TextView textView2 = (TextView) findViewById(R.id.descripView);
+        textView2.setText("Bio: " + peopleList.get(personId).getDescription());
+
+    }
+
+    // initList is a helper method that grabs our "team data" and associates it with the correct id
+    // based on its position in the list
+    // in a real application, this would be where we query the database and fetch the data associated
+    // with the teams
+    // we can perform some shared preferences data storing for now
+    private void initList() {
+
+        peopleList = SessionManagement.getPersonList(this, "people");
     }
 
 
