@@ -2,6 +2,7 @@ package com.example.troy.linguameethome;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,7 @@ import java.util.List;
 public class UserProfile extends Settings {
     int personId;
     List<Person> peopleList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class UserProfile extends Settings {
         textView.setText(peopleList.get(personId).getName());
         TextView textView2 = (TextView) findViewById(R.id.descripView);
         textView2.setText("Bio: " + peopleList.get(personId).getDescription());
+        textView2.setMovementMethod(new ScrollingMovementMethod());
 
     }
 
