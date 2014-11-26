@@ -10,8 +10,8 @@ public class AlertDialogManager {
     public void showAlertDialog(Context context, String title, String message,
                                 Boolean status) {
         AlertDialog alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle(Html.fromHtml("<font color=#000000>Oops!</font>"));
-        alertDialog.setMessage(Html.fromHtml("<font color=#000000>Incorrect information, please try again</font>"));
+        alertDialog.setTitle(Html.fromHtml("<font color=#666666>Oops!</font>"));
+        alertDialog.setMessage(Html.fromHtml("<font color=#666666>Incorrect information, please try again</font>"));
 
         if(status != null)
         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {

@@ -19,6 +19,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 
 public class Login extends Settings {
@@ -30,48 +32,55 @@ public class Login extends Settings {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-            session = new SessionManagement(getApplicationContext());
-            session.clearData();
-            txtUsername = (EditText) findViewById(R.id.txtUsername);
-            txtPassword = (EditText) findViewById(R.id.txtPassword);
-
-            btnLogin = (Button) findViewById(R.id.btnLogin);
-
-            btnLogin.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View arg0) {
-                    // Get username, password from EditText
-                    String username = txtUsername.getText().toString();
-                    String password = txtPassword.getText().toString();
-
-                    // Check if username, password is filled
-
-                    if(username.trim().length() > 0 && password.trim().length() > 0){
-                        if(username.equals("Troy") && password.equals("stuff"))  {
-
-                                Intent i = new Intent(getApplicationContext(), HomeScreen.class);
-                                startActivity(i);
-                                finish();
-
-                        }else{
-                            // username / password doesn't match
-                            alert.showAlertDialog(Login.this, "Login failed..", "Username/Password is incorrect", false);
-                        }
+        session = new SessionManagement(getApplicationContext());
+        session.clearData();
+        txtUsername = (EditText) findViewById(R.id.txtUsername);
+        txtPassword = (EditText) findViewById(R.id.txtPassword);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+// Get username, password from EditText
+                String username = txtUsername.getText().toString();
+                String password = txtPassword.getText().toString();
+// Check if username, password is filled
+                if(username.trim().length() > 0 && password.trim().length() > 0){
+                    if(username.equals("Troy") && password.equals("stuff")) {
+                        Intent i = new Intent(getApplicationContext(), HomeScreen.class);
+                        startActivity(i);
+                        finish();
                     }else{
-                        // user didn't enter username or password
-                        alert.showAlertDialog(Login.this, "Login failed..", "Please enter username and password", false);
+// username / password doesn't match
+                        alert.showAlertDialog(Login.this, "Login failed..", "Username/Password is incorrect", false);
                     }
-
+                }else{
+// user didn't enter username or password
+                    alert.showAlertDialog(Login.this, "Login failed..", "Please enter username and password", false);
                 }
-            });
-        }
+            }
+        });
+        initData();
+    }
 
 
+    private void initData() {
 
+        List<Person> peopleList = new ArrayList<Person>();
 
+        peopleList.add(new Person("John Smith", "Just your average Joe looking for some language practice."));
+        peopleList.add(new Person("Sam McGee", "I'm from TN, my favorite travel destination is the Yukon, and Robert Service is my favorite poet. "));
+        peopleList.add(new Person("Troy Leonard", "MSI Grad Student. Generally awesome."));
+        peopleList.add(new Person("Sarah Anderson", "MSI/MPP. Dua te praktikuar shqipen time!"));
+        peopleList.add(new Person("German Lipiec", "BSI that likes to jetset and make logos."));
+        peopleList.add(new Person("Alex White", "I like hunting and fishing and high tea."));
+        peopleList.add(new Person("Becca Rikowski", "Trying to learn Spanish before my backpacking trip to South America"));
+        peopleList.add(new Person("Rich Savage", "Polyglot currently trying to master Kazahk."));
+        peopleList.add(new Person("Tara Strohmeyer", "Linguist and language lover at heart, CSR by day."));
+        peopleList.add(new Person("Lucy Krauss", "Studied abroad in Milan a year ago.  Miss having one-on-one conversations in Italian and Spanish!"));
 
+        SessionManagement.putPersonList(this, "people", peopleList);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,15 +126,12 @@ public class Login extends Settings {
         return true;
     }
 
-    public void logIn(View view){
-
-        Intent logIn_intent = new Intent(this, HomeScreen.class);
-        startActivity(logIn_intent);
-    }
 
     public void signUp(View view) {
 
         Intent signUp_intent = new Intent(this, SignUp.class);
         startActivity(signUp_intent);
+        finish();
+
     }
 }

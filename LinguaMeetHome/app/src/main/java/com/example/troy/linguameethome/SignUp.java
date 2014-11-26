@@ -38,5 +38,6 @@ public class SignUp extends Settings {
     public void signUp(View view) {
         Intent signUp_intent = new Intent(this, HomeScreen.class);
         startActivity(signUp_intent);
+        finish();
     }
 }

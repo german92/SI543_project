@@ -1,18 +1,23 @@
 package com.example.troy.linguameethome;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class Privacy extends Settings {
-
+    TextView t2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy);
+        t2 = (TextView) findViewById(R.id.privacyStatement);
+        Typeface customFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
+        t2.setTypeface(customFont);
     }
 
 

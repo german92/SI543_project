@@ -11,7 +11,7 @@
     tools:context=".Login">
 
 
-    <TextView
+    TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -25,11 +25,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Login:"
+        android:text=""
         android:id="@+id/textView2"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="81dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,33 +62,52 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         android:id="@+id/btnLogin"
-        android:onClick="logIn"
-        android:layout_below="@+id/txtPassword"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:id="@+id/button4"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_toStartOf="@+id/btnLogin"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/btnLogin"
-        android:layout_alignEnd="@+id/btnLogin" />
+        android:text="Forgot password?"
+        android:id="@+id/button"
+        android:layout_below="@+id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"
+        />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:id="@+id/button5"
-        android:layout_toEndOf="@+id/button4"
-        android:onClick="signUp"
-        android:layout_marginTop="68dp"
-        android:layout_below="@+id/button4"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4"
-        android:layout_marginLeft="63dp" />
+        android:text="New user? Sign up below!"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:id="@+id/button2"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"
+        android:onClick="signUp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/full_logo"/>
 
 </RelativeLayout>

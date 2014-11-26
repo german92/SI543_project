@@ -44,38 +44,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton3"
-            android:src="@drawable/settings"
+            android:src="?attr/settingsButton"
             android:onClick="options"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:src="@drawable/home"
+            android:src="?attr/homeButton"
             android:onClick="homeScreen"
             android:layout_weight="1"
-            android:background="@android:color/transparent" />
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="My LM"
+            android:src="?attr/profileButton"
             android:id="@+id/MyLM"
             android:onClick="profile"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="bottom"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
-            android:src="@drawable/chat"
+            android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
         </LinearLayout>
 
@@ -102,6 +106,9 @@
             android:text="@string/custom1"
             android:id="@+id/custom1"
             android:layout_weight="1"
+            android:background="@drawable/rectangle_button_shape"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
             />
 
         <Button
@@ -110,6 +117,9 @@
             android:text="@string/custom2"
             android:id="@+id/custom2"
             android:layout_weight="1"
+            android:background="@drawable/rectangle_button_shape"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
             />
 
         <Button
@@ -118,6 +128,9 @@
             android:text="@string/custom3"
             android:id="@+id/custom3"
             android:layout_weight="1"
+            android:background="@drawable/rectangle_button_shape"
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
             />
     </LinearLayout>
 

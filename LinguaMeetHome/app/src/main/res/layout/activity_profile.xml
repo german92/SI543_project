@@ -36,7 +36,9 @@
         android:id="@+id/button2"
         android:layout_below="@+id/textView"
         android:layout_toRightOf="@+id/imageView"
-        android:onClick="editProfile" />
+        android:onClick="editProfile"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,20 +92,22 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton3"
             android:layout_alignParentBottom="true"
-            android:src="@drawable/settings"
+            android:src="?attr/settingsButton"
             android:onClick="options"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:src="@drawable/home"
+            android:src="?attr/homeButton"
             android:onClick="homeScreen"
             android:layout_alignParentBottom="true"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
 
         <ImageButton
@@ -111,10 +115,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
             android:layout_alignParentBottom="true"
-            android:src="@drawable/chat"
+            android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
 </RelativeLayout>

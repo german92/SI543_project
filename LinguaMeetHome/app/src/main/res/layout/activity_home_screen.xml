@@ -22,20 +22,19 @@
         android:onClick="searchResults"
         android:background="@drawable/circle_button_shape"
         android:textSize="40dp"
-        android:layout_marginBottom="61dp"
         android:textColor="#ffffff"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="What language would you like to learn?"
         android:id="@+id/textView"
-        android:textSize="17dp"
+        android:textSize="15dp"
         android:inputType="text"
-        android:layout_marginBottom="56dp"
-        android:layout_above="@+id/button2"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <LinearLayout
@@ -51,30 +50,33 @@
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:id="@+id/imageButton"
-            android:src="@drawable/settings"
+            android:src="?attr/settingsButton"
             android:onClick="options"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="My LM"
+            android:src="?attr/profileButton"
             android:id="@+id/MyLM"
             android:onClick="profile"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:textSize="20dp"/>
+            android:layout_gravity="center"
+            />
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
-            android:src="@drawable/chat"
+            android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
@@ -83,13 +85,20 @@
         android:layout_height="wrap_content"
         android:text="Welcome to our home page! Use the search function below to find other users near you to begin learning a language today!"
         android:id="@+id/homeTextViewCustomFont"
-        android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:textSize="18dp"
+        android:layout_above="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textSize="18dp"
-        />
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/full_logo"/>
 
 </RelativeLayout>

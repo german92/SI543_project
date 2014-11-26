@@ -20,18 +20,22 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="63dp"
-        android:onClick="settings"/>
+        android:onClick="settings"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Privacy"
+        android:text="Privacy Statement"
         android:id="@+id/button5"
         android:layout_below="@+id/button4"
         android:layout_alignLeft="@+id/button4"
         android:layout_alignStart="@+id/button4"
-        android:layout_marginTop="35dp"
-        android:onClick="privacy"/>
+        android:layout_marginTop="40dp"
+        android:onClick="privacy"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -41,7 +45,9 @@
         android:layout_below="@+id/button5"
         android:layout_alignLeft="@+id/button5"
         android:layout_alignStart="@+id/button5"
-        android:layout_marginTop="42dp" />
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectangle_button_shape"
+        android:textColor="#ffffff"/>
     <!--    android:onClick="logOut" -->
 
 
@@ -57,27 +63,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
-            android:src="@drawable/home"
+            android:src="?attr/homeButton"
             android:onClick="homeScreen"
             android:layout_weight="1"
             android:background="@android:color/transparent"
             />
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="My LM"
+            android:src="?attr/profileButton"
             android:id="@+id/MyLM"
             android:onClick="profile"
             android:layout_weight="1"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+             />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
-            android:src="@drawable/chat"
+            android:src="?attr/chatButton"
             android:onClick="messages"
             android:layout_weight="1"
             android:background="@android:color/transparent"/>
