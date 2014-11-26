@@ -39,13 +39,6 @@ public class Login extends Settings {
 
         List<Person> peopleList = new ArrayList<Person>();
 
-        String defaultDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do" +
-                " eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam," +
-                " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." +
-                " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu " +
-                "fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in " +
-                "culpa qui officia deserunt mollit anim id est laborum.";
-
         peopleList.add(new Person("John Smith", "Just your average Joe looking for some language practice."));
         peopleList.add(new Person("Sam McGee", "I'm from TN, my favorite travel destination is the Yukon, and Robert Service is my favorite poet. "));
         peopleList.add(new Person("Troy Leonard", "MSI Grad Student. Generally awesome."));
