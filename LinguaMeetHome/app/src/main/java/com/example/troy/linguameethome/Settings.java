@@ -14,7 +14,7 @@ public class Settings extends Activity implements OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        themeUtils.onActivityCreateSetTheme(this);
+        ThemeUtils.onActivityCreateSetTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
@@ -77,13 +77,13 @@ public class Settings extends Activity implements OnClickListener {
         {
             //Respective case is called when the button is clicked
             case R.id.custom1:
-                themeUtils.changeToTheme(this, themeUtils.C1);
+                ThemeUtils.changeToTheme(this, ThemeUtils.C1);
                 break;
             case R.id.custom2:
-                themeUtils.changeToTheme(this, themeUtils.C2);
+                ThemeUtils.changeToTheme(this, ThemeUtils.C2);
                 break;
             case R.id.custom3:
-                themeUtils.changeToTheme(this, themeUtils.C3);
+                ThemeUtils.changeToTheme(this, ThemeUtils.C3);
         }
     }
 }
