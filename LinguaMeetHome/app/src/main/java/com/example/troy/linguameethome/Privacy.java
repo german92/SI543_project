@@ -11,10 +11,13 @@ import android.widget.TextView;
 
 public class Privacy extends Settings {
     TextView t2;
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
         t2 = (TextView) findViewById(R.id.privacyStatement);
         Typeface customFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
         t2.setTypeface(customFont);

@@ -5,14 +5,31 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import java.util.List;
 
 
 public class SendMessages extends Settings {
-
+    int personId;
+    List<Person> peopleList;
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_messages);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
+        initList();
+
+        // Get the message from the intent
+        Intent intent = getIntent();
+        String message2 = intent.getStringExtra(UserProfile.EXTRA_MESSAGE);
+
+        personId = (int) Long.parseLong(message2);
+
+        // Create the text view
+        TextView textView = (TextView) findViewById(R.id.userNameMsg);
+        textView.setText(peopleList.get(personId).getName());
     }
 
 
@@ -34,6 +51,11 @@ public class SendMessages extends Settings {
         }
         return super.onOptionsItemSelected(item);
     }
+    private void initList() {
+
+        peopleList = SessionManagement.getPersonList(this, "people");
+    }
+
 
     public void homeScreen(View view) {
 

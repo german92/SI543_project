@@ -6,6 +6,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -15,12 +16,14 @@ import java.util.List;
 public class UserProfile extends Settings {
     int personId;
     List<Person> peopleList;
-
+    public final static String EXTRA_MESSAGE = "com.example.troy.linguameethome";
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
-
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
         initList();
 
         // Get the message from the intent
@@ -35,6 +38,15 @@ public class UserProfile extends Settings {
         TextView textView2 = (TextView) findViewById(R.id.descripView);
         textView2.setText("Bio: " + peopleList.get(personId).getDescription());
         textView2.setMovementMethod(new ScrollingMovementMethod());
+        Button sndMsg = (Button) findViewById((R.id.send_a_msg));
+        sndMsg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMsg(personId);
+            }
+        });
+
+
 
     }
 
@@ -48,7 +60,12 @@ public class UserProfile extends Settings {
         peopleList = SessionManagement.getPersonList(this, "people");
     }
 
-
+    public void sendMsg(long id) {
+        Intent intent = new Intent(this, SendMessages.class);
+        String message = String.valueOf(id);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

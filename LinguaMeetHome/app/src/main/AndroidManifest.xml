@@ -4,13 +4,13 @@
 
     <application
         android:allowBackup="true"
-
-        android:label="@string/app_name"
+        android:icon="@drawable/logo_lm"
+        android:label="LinguaMeet"
         android:theme="@style/CustomTheme1" >
         <activity
             android:name=".HomeScreen"
             android:label="Home Search Page" >
-            <intent-filter>
+            <intent-filter android:label="LinguaMeet">
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

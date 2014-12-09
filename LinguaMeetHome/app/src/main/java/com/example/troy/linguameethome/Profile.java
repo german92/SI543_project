@@ -19,11 +19,13 @@ import android.view.View;
 
 
 public class Profile extends Settings {
-
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
     }
 
 

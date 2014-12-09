@@ -66,9 +66,9 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:background="@drawable/rectangle_button_shape"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"/><![CDATA[
 
-    <Button
+    Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,27 +81,9 @@
         android:textColor="#ffffff"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New user? Sign up below!"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:textSize="20dp"/>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign up"
-        android:id="@+id/button2"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rectangle_button_shape"
-        android:textColor="#ffffff"
-        android:onClick="signUp"/>
+
+    ]]>
 
     <ImageView
         android:layout_width="wrap_content"

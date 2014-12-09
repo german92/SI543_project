@@ -1,6 +1,7 @@
 package com.example.troy.linguameethome;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,13 +22,18 @@ public class SearchResults extends Settings {
     public final static String EXTRA_MESSAGE = "com.example.troy.linguameethome";
 
     List<Map<String, String>> peopleList = new ArrayList<Map<String, String>>();
+    SessionManagement session;
 
-
-
+    TextView t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
+        t1= ((TextView) findViewById(R.id.searchDescription));
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
+        t1.setTypeface(myCustomFont);
 
         registerForContextMenu((ListView) findViewById(R.id.listView));
 

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 
 public class EditProfile extends Settings {
-
+    SessionManagement session;
     TextView t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,8 @@ public class EditProfile extends Settings {
         t1= ((TextView) findViewById(R.id.homeTextViewCustomFont));
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
         t1.setTypeface(myCustomFont);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
     }
 
 

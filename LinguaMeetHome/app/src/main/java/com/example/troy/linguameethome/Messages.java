@@ -8,11 +8,13 @@ import android.view.View;
 
 
 public class Messages extends Settings {
-
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
     }
 
 
