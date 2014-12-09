@@ -1,20 +1,41 @@
 package com.example.troy.linguameethome;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class Messages extends Settings {
     SessionManagement session;
+
+    TextView message;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Message = "messageKey";
+
+    SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
         session = new SessionManagement(getApplicationContext());
         session.checkLogin();
+
+
+        message = (TextView) findViewById(R.id.messageTextView);
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        if (sharedpreferences.contains(Message))
+        {
+            message.setText(sharedpreferences.getString(Message, ""));
+
+        }
     }
 
 

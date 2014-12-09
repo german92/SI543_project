@@ -56,33 +56,12 @@
     <TextView
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="John said: Would you like to meet at Starbucks to go over Spanish?"
-        android:id="@+id/textView"
+        android:text=""
+        android:id="@+id/messageTextView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="You said: I would love to! Does 3pm work for you?"
-        android:id="@+id/textView2"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="John said: That sounds great! See you then."
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView2"
-        android:layout_toLeftOf="@+id/textView2"
-        android:layout_toStartOf="@+id/textView2"
-        android:layout_marginTop="53dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

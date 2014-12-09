@@ -1,6 +1,8 @@
 package com.example.troy.linguameethome;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,14 +14,20 @@ import java.util.List;
 public class SendMessages extends Settings {
     int personId;
     List<Person> peopleList;
-    SessionManagement session;
+
+    TextView message;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Message = "messageKey";
+
+    SharedPreferences sharedpreferences;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_messages);
-        session = new SessionManagement(getApplicationContext());
-        session.checkLogin();
         initList();
+
 
         // Get the message from the intent
         Intent intent = getIntent();
@@ -30,8 +38,28 @@ public class SendMessages extends Settings {
         // Create the text view
         TextView textView = (TextView) findViewById(R.id.userNameMsg);
         textView.setText(peopleList.get(personId).getName());
+
+
+
+        message = (TextView) findViewById(R.id.editTextMessage);
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        if (sharedpreferences.contains(Message))
+        {
+            message.setText(sharedpreferences.getString(Message, ""));
+
+        }
+
     }
 
+    public void run(View view) {
+        String m = message.getText().toString();
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString(Message, m);
+        editor.commit();
+        messages();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -75,7 +103,7 @@ public class SendMessages extends Settings {
         startActivity(profile_intent);
     }
 
-    public void messages(View view) {
+    public void messages() {
 
         Intent messages_intent = new Intent(this, Messages.class);
         startActivity(messages_intent);
