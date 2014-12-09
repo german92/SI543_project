@@ -12,10 +12,13 @@ import java.util.List;
 public class SendMessages extends Settings {
     int personId;
     List<Person> peopleList;
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_messages);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
         initList();
 
         // Get the message from the intent

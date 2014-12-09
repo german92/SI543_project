@@ -17,11 +17,13 @@ public class UserProfile extends Settings {
     int personId;
     List<Person> peopleList;
     public final static String EXTRA_MESSAGE = "com.example.troy.linguameethome";
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
-
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
         initList();
 
         // Get the message from the intent

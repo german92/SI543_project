@@ -3,6 +3,7 @@ package com.example.troy.linguameethome;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.service.textservice.SpellCheckerService;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,13 +12,14 @@ import android.view.View.OnClickListener;
 //Settings class is extended on all other classes and files so that the theme change in multiple
 //views at the same time
 public class Settings extends Activity implements OnClickListener {
-
+    SessionManagement session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ThemeUtils.onActivityCreateSetTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
 
         //setOnClickListener allows a callback to be invoked when your buttons are clicked
         findViewById(R.id.custom1).setOnClickListener(this);

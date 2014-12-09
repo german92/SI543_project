@@ -22,13 +22,15 @@ public class SearchResults extends Settings {
     public final static String EXTRA_MESSAGE = "com.example.troy.linguameethome";
 
     List<Map<String, String>> peopleList = new ArrayList<Map<String, String>>();
-
+    SessionManagement session;
 
     TextView t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
         t1= ((TextView) findViewById(R.id.searchDescription));
         Typeface myCustomFont=Typeface.createFromAsset(getAssets(),"Fonts/CaviarDreams.ttf");
         t1.setTypeface(myCustomFont);

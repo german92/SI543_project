@@ -17,8 +17,8 @@
         <item name="android:icon">@android:color/transparent</item>
         <item name="settingsButton">@drawable/settings</item>
         <item name="homeButton">@drawable/home</item>
-        <item name="chatButton">@drawable/chat</item>
-        <item name="profileButton">@drawable/logo_lm</item>
+        <item name="chatButton">@drawable/chat_logo</item>
+        <item name="profileButton">@drawable/my_lm_logo</item>
     </style>
 
     <style name="CustomTheme2" parent="android:Theme.Black">
@@ -27,8 +27,8 @@
         <item name="android:textColor">#ffffff</item>
         <item name="settingsButton">@drawable/settings_white</item>
         <item name="homeButton">@drawable/home_white</item>
-        <item name="chatButton">@drawable/chat_white</item>
-        <item name="profileButton">@drawable/logo_lm_dark</item>
+        <item name="chatButton">@drawable/chat_logo</item>
+        <item name="profileButton">@drawable/my_lm_logo</item>
 
    </style>
 
@@ -38,8 +38,8 @@
         <item name="android:textColor">#ffcb05</item>
         <item name="settingsButton">@drawable/settings_maize</item>
         <item name="homeButton">@drawable/home_maize</item>
-        <item name="chatButton">@drawable/chat_maize</item>
-        <item name="profileButton">@drawable/logo_lm_maize</item>
+        <item name="chatButton">@drawable/chat_logo</item>
+        <item name="profileButton">@drawable/my_lm_logo</item>
 
     </style>
 
