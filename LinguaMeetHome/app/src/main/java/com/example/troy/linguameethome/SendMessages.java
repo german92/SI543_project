@@ -45,11 +45,7 @@ public class SendMessages extends Settings {
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
-        if (sharedpreferences.contains(Message))
-        {
-            message.setText(sharedpreferences.getString(Message, ""));
 
-        }
 
     }
 
