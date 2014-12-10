@@ -103,6 +103,12 @@ public class UserProfile extends Settings {
         startActivity(profile_intent);
     }
 
+    public void messages(View view) {
+
+        Intent messages_intent = new Intent(this, Messages.class);
+        startActivity(messages_intent);
+    }
+
     public void send_messages(View view) {
 
         Intent messages_intent = new Intent(this, SendMessages.class);

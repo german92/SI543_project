@@ -109,6 +109,12 @@ public class Options extends Settings {
         startActivity(homeScreen_intent);
     }
 
+    public void options(View view) {
+
+        Intent options_intent = new Intent(this, Options.class);
+        startActivity(options_intent);
+    }
+
     public void profile(View view) {
 
         Intent profile_intent = new Intent(this, Profile.class);

@@ -103,38 +103,12 @@
         android:layout_above="@+id/linearLayout"
         android:layout_below="@+id/textView2">
 
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="@string/custom1"
-            android:id="@+id/custom1"
-            android:layout_weight="1"
-            android:background="@drawable/rectangle_button_shape"
-            android:layout_margin="10dp"
-            android:textColor="#ffffff"
-            />
+        <fragment android:name="com.example.troy.linguameethome.ButtonFragment"
+            android:id="@+id/button_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/button_fragment" />
 
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="@string/custom2"
-            android:id="@+id/custom2"
-            android:layout_weight="1"
-            android:background="@drawable/rectangle_button_shape"
-            android:layout_margin="10dp"
-            android:textColor="#ffffff"
-            />
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="@string/custom3"
-            android:id="@+id/custom3"
-            android:layout_weight="1"
-            android:background="@drawable/rectangle_button_shape"
-            android:layout_margin="10dp"
-            android:textColor="#ffffff"
-            />
     </LinearLayout>
 
 
