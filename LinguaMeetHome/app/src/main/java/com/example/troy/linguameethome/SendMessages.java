@@ -14,7 +14,7 @@ import java.util.List;
 public class SendMessages extends Settings {
     int personId;
     List<Person> peopleList;
-
+    SessionManagement session;
     TextView message;
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Message = "messageKey";
@@ -27,7 +27,8 @@ public class SendMessages extends Settings {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_messages);
         initList();
-
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
 
         // Get the message from the intent
         Intent intent = getIntent();
