@@ -23,6 +23,8 @@ public class Options extends Settings {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
+        session = new SessionManagement(getApplicationContext());
+        session.checkLogin();
         button = (Button) findViewById(R.id.alertButton);
         // add button listener
         button.setOnClickListener(new OnClickListener() {
@@ -105,6 +107,12 @@ public class Options extends Settings {
 
         Intent homeScreen_intent = new Intent(this, HomeScreen.class);
         startActivity(homeScreen_intent);
+    }
+
+    public void options(View view) {
+
+        Intent options_intent = new Intent(this, Options.class);
+        startActivity(options_intent);
     }
 
     public void profile(View view) {

@@ -8,7 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 
-public class themeUtils
+public class ThemeUtils
 
 {
     private static int cTheme;

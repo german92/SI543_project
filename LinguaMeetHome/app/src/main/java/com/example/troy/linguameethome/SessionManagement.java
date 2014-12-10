@@ -19,10 +19,8 @@ public class SessionManagement {
     Editor editor;
     Context _context;
     int PRIVATE_MODE = 0;
-    private static final String PREF_NAME = "LMPrefs";
     private static final String IS_LOGIN = "IsLoggedIn";
-    public static final String KEY_NAME = "username";
-    public static final String KEY_PASSWORD = "password";
+
 
     // Constructor
     public SessionManagement(Context context){
@@ -43,7 +41,7 @@ public class SessionManagement {
             // Add new Flag to start new Activity
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-            // Staring Login Activity
+            // Start Login Activity
             _context.startActivity(i);
         }
 
@@ -100,7 +98,7 @@ public class SessionManagement {
     }
 
     public void clearData() {
-        // Clearing all data from Shared Preferences
+        // Clearing login status for user
         editor.remove(IS_LOGIN);
         editor.apply();
     }
@@ -134,20 +132,6 @@ public class SessionManagement {
 
     }
 
-    public static void putStringList(Activity activity, String key, List<String> list) {
-
-        // for each string in the list, we want to add it to a new variable and separate the strings
-        // by putting semicolons in between them
-
-        // TextUtils.join takes a list or array of objects and places them into one string separated
-        // by the string in the first parameter (semicolon in this case)
-
-        String listString = TextUtils.join(";", list);
-
-        // save the new combined string into preferences
-        myPutString(activity, key, listString);
-
-    }
 
     // utility that wraps together the sharedpreferences call into one method
     private static void myPutString(Activity activity, String key, String value) {

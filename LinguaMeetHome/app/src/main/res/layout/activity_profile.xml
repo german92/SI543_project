@@ -87,39 +87,12 @@
         android:layout_alignParentEnd="true"
         >
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton3"
-            android:layout_alignParentBottom="true"
-            android:src="?attr/settingsButton"
-            android:onClick="options"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center"/>
+        <fragment android:name="com.example.troy.linguameethome.ButtonFragment"
+            android:id="@+id/button_fragment6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/button_fragment" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:src="?attr/homeButton"
-            android:onClick="homeScreen"
-            android:layout_alignParentBottom="true"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center"/>
-
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:layout_alignParentBottom="true"
-            android:src="?attr/chatButton"
-            android:onClick="messages"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:layout_gravity="center"/>
     </LinearLayout>
 
 </RelativeLayout>

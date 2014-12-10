@@ -75,6 +75,12 @@ public class HomeScreen extends Settings {
         startActivity(searchResults_intent);
     }
 
+    public void homeScreen(View view) {
+
+        Intent homeScreen_intent = new Intent(this, HomeScreen.class);
+        startActivity(homeScreen_intent);
+    }
+
     public void options(View view) {
 
         Intent options_intent = new Intent(this, Options.class);
